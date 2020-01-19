@@ -1,0 +1,211 @@
+		<!doctype html>
+<html>
+	<head>
+		<title>Form</title>
+		<meta charset="utf-8">
+		<meta name="view port" content="width=device-width"initial-scale="1.0">
+		<style>form{text-align: left;
+			}
+				.myslides {display:none;}
+				  body{
+        background-image: url(marvel.png);
+       background-repeat: no-repeat;
+       background-position: center;
+       background-color: ;
+      }
+.dropdown{
+     position:relative;
+	 display:inline-block;
+	 }
+.dropdown-content{
+    display:none;
+	position:absolute;
+	background-color:red;
+	min-width:120px;
+	box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding:12px 16px;
+	color:white;
+	}
+	 
+	.dropdown:hover .dropdown-content{
+	display:block;
+	}
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+      margin-top: 100px;
+    margin-bottom: -200px;
+    align-items: center;
+}
+
+h1{text-align: center;
+
+margin-bottom: :-50px;
+}
+
+.menu ul{
+	display: inline-flex;
+	margin: 50px;
+}
+.menu ul li{
+	list-style: none;
+	margin: 0 20px;
+	}
+.logo img{
+	width:100px;
+	margin-right: 48px;
+	margin-top: -8px;
+			
+}
+.active{
+	color:white;
+
+}
+.hi{
+	color:white;
+}
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+</style>
+</head>
+	<body bgcolor="#F1F3F6">
+<table border="0" width="100%" bgcolor="red">
+<tr>
+<td align="center"><a href="store.html"><img src="marvel.png" height="30px"></a></td>
+<td><input type="text" placeholder="Search for products" style="width:550px;height:25px">
+<input type="button" value="Search" style="width:100px;height:30px"></td>
+<th><a href="login.html"><font color="white">Login & Signup</a></font></th>
+<th><img src="cart.png" height="30px"></th>
+</tr></table>
+<table border="0" width="100%" height="10%"bgcolor="white" >
+<th width="12.5%"><font color="black"><a href="clothing.html">Clothing</a></font></th>
+<th width="12.5%"><font color="black"><a href="kids.html">Kids</font></th>
+<th width="12.5%"><font color="black"><a href="footwear.html">Footwear</font></th>
+<th width="12.5%"><font color="black"><a href="accessories.html">Accessories</font></th>
+<th width="12.5%"><font color="black"><a href="comic.html">Comics</font></th>
+
+</tr></table><h1>Signup</h1>
+		<div class="flex-container">
+		
+		<form name="htmlform" method="post" action="firstwebpage.html" onsubmit="return handleSubmit()">
+			<div><label>Name:</label>
+				<input type="text" Name="firstName" placeholder="firstName" id="firstName" required>
+				<input type="text" Name="lastName" placeholder="lastName" id="lastName"required><p>
+			</div><label>Email:</label>
+				<input type="email" name="email" placeholder="email" class="text"required><p>
+			<label>Password:</label>
+				<input type="password" name="password" placeholder="password" class="text"required><p>
+			<label>Contact:</label>
+			<select name="number">
+				<option>977</option>
+				<option>201</option>
+				<option>335</option>
+				<option>458</option>
+				<option>165</option>
+				<option>54<option><span>
+				<input type="number" name="number" placeholder="number" class="text"required></span><p>
+			<label>country</label>
+			<select name="country">
+				<option>Nepal</option>
+				<option>UK</option>
+				<option>USA</option>
+				<option>India</option>
+				<option>Korea</option>
+				<option>Japan</option>
+			</select><p>
+			<label>gender:</label>
+				<input type="radio"name="gender" value="male"required>male
+				<input type="radio"name="gender"value="female">female
+				<input type="radio"name="gender"value="others">others<p>
+				<a href="login.html"><input type="submit" ></a>
+
+		</form>
+	</div></div>
+ <hr>
+	<table border="0" width="100%">
+<tr>
+
+<th bgcolor="red"width="25%" ><font color="white">Follow us</font></th>
+<th bgcolor="red" width="25%" ><font color="white">Customer Service</font></th>
+
+</tr>
+<tr>
+
+<td><ul>
+<li>Facebook</li>
+<li>Twitter</li>
+<li>Instagram</li>
+<li>Youtube</li>
+</ul>
+</td>
+<td><ul>
+<li>01-4422548</li>
+<li>9876543210</li>
+<li>Kathmandu,Nepal</li>
+<li>https://www.facebook.com/marvel</li>
+</ul>
+</td>
+
+</tr>
+</table>
+	<script>		
+							
+			function handleSubmit(){ 
+				var firstName=document.htmlform.firstName.value;
+				var lastName=document.htmlform.lastName.value;
+				var email=document.htmlform.email.value;
+				var password=document.htmlform.password.value;
+				var number=document.htmlform.number.value;
+				var country=document.htmlform.country.value;
+				var gender=document.htmlform.gender.value;
+				console.log(firstName,lastName,email,password,number,country,gender);
+			
+						if (firstName=="")
+							{alert("fisrtName must not be empty");}
+							return false;
+						if (lastName=="")
+							{alert("lastName must not be empty");}
+							return false;
+						if (email=="")
+							{alert("email must not be empty");}
+							return false;
+						if (password.length<9)
+							{alert("password must not be empty");}
+							return false;
+						if (number=="")
+							{alert("number must not be empty");}
+							return false;
+						if (country=="")
+							{alert("country must not be empty");}
+							return false;
+						if (gender=="")
+							{alert("gender must not be empty");}
+						
+					return false;
+			}
+	</script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+
+<style>
+  *{
+   margin: 0;
+   padding: ;
+   box-sizing: border-box;
+  }
+
+  body{
+   font-family: sans-serif;
+  }
+
+  a:link,
+  a:visited{
+   text-decoration: none;
+  }
+
+  .modal{
+   background-color: rgba(0,0,0, .8);
+   width:100%;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .5s;
+  }
+
+  .modal__content{
+   width: 75%;
+   height: 65%;
+   background-color: #fff;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 2em;
+   border-radius: 1em;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .5s;
+  }
+
+  #modal:target{
+   opacity: 1;
+   visibility: visible;
+  }
+
+  #modal:target .modal__content{
+   opacity: 1;
+   visibility: visible;
+  }
+
+  .modal__close{
+   color: #363636;
+   font-size: 2em;
+   position: absolute;
+   top: .5em;
+   right: 1em;
+  }
+
+  .modal__heading{
+   color: red;
+   margin-bottom: 1em;
+  }
+
+  .modal__paragraph{
+   line-height: 1.5em;
+  }
+
+.modal-open{
+ display: inline-block;
+ color: dodgerblue;
+ margin: ;
+
+}
+h1{padding: 50px;}
+
+
+ </style>
+
+<title>Store</title>
+</head>
+<body bgcolor="#F1F3F6" link="black" vlink="black" alink="black">
+<table border="0" width="100%" bgcolor="red">
+<tr>
+<td align="center"><a href="store.html"><img src="marvel.png" height="30px"></a></td>
+<td><input type="text" placeholder="Search for products" style="width:550px;height:25px">
+<input type="button" value="Search" style="width:100px;height:30px" ></td>
+<th><a href="login.html"><font color="white">Login & Signup</a></font></th>
+<th><img src="cart.png" height="30px"></th>
+</tr></table>
+<table border="0" width="100%" height="10%"bgcolor="white" >
+<th width="12.5%"><font color="black"><a href="clothing.html">Clothing</a></font></th>
+<th width="12.5%"><font color="black"><a href="kids.html">Kids</font></th>
+<th width="12.5%"><font color="black"><a href="footwear.html">Footwear</font></th>
+<th width="12.5%"><font color="black"><a href="accessories.html">Accessories</font></th>
+<th width="12.5%"><font color="black"><a href="comic.html">Comics</font></th>
+</tr></table><font align="center"><h1>Enter Your Details</h1></font>
+    <div class="flex-container">
+    
+    <form name="htmlform" method="post" action="firstwebpage.html" onsubmit="return handleSubmit()">
+      <label>Name:</label>
+        <input type="text" Name="firstName" placeholder="First Name" id="firstName" required>
+        <input type="text" Name="lastName" placeholder="Last Name" id="lastName"required><p><br>
+      </div><label>Email:</label>
+        <input type="email" name="email" placeholder="Email" class="text"required><p><br>
+      <label>Password:</label>
+        <input type="password" name="password" placeholder="Password" class="text"required><p><br>
+      <label>Contact:</label>
+      <select name="number">
+        <option>977</option>
+        <option>201</option>
+        <option>335</option>
+        <option>458</option>
+        <option>165</option>
+        <option>54<option>
+       <span><input type="number" name="number" placeholder="number" class="text"required></span><p><br>
+      <label>Location:</label>
+      <select name="country">
+        <option>Lainchor Area</option>
+        <option>Balaju Area</option>
+        <option>Maharjgung Area</option>
+        <option>Sinamangal Area</option>
+        <option>Sadobato Area</option>
+        <option>Jhamsikhel Area</option>
+        <option>Thankot Area</option>
+        <option>Koteshwor Area</option>
+        <option>Baneshwor Area</option>
+        <option>Bhaktapur Area</option>
+        <option>Lalitpur Area</option>
+        <option>Goadwari Area</option>
+      </select>
+    
+        <a href="#modal" class="modal-open"><input type="button" value="  Submit  " style="widt:150px;height:30px;background-color:red;color:white;"></a><br><BR><BR><br><BR>
+        <div class="modal" id="modal">
+    <div class="modal__content">
+      <a href="#" class="modal__close">&times;</a>
+      <h2 class="modal__heading">Thanks For Shopping</h2>
+      <p class="modal__paragraph">Our Customer Service Agent will call you to confirm your order.</p>
+    </div>
+ </div>
+      <br>
+      <br>  
+ <hr>
+  <table border="0" width="100%">
+<tr>
+
+<th bgcolor="red"width="25%" ><font color="white">Follow us</font></th>
+<th bgcolor="red" width="25%" ><font color="white">Customer Service</font></th>
+
+</tr>
+<tr>
+
+<td><ul>
+<li>Facebook</li>
+<li>Twitter</li>
+<li>Instagram</li>
+<li>Youtube</li>
+</ul>
+</td>
+<td><ul>
+<li>01-4422548</li>
+<li>9876543210</li>
+<li>Kathmandu,Nepal</li>
+<li>https://www.facebook.com/marvel</li>
+</ul>
+</td>
+
+</tr>
+</table>
+  <script>    
+              
+      function handleSubmit(){ 
+        var firstName=document.htmlform.firstName.value;
+        var lastName=document.htmlform.lastName.value;
+        var email=document.htmlform.email.value;
+        var password=document.htmlform.password.value;
+        var number=document.htmlform.number.value;
+        var country=document.htmlform.country.value;
+        var gender=document.htmlform.gender.value;
+        console.log(firstName,lastName,email,password,number,country,gender);
+      
+            if (firstName=="")
+              {alert("fisrtName must not be empty");}
+              return false;
+            if (lastName=="")
+              {alert("lastName must not be empty");}
+              return false;
+            if (email=="")
+              {alert("email must not be empty");}
+              return false;
+            if (password.length<9)
+              {alert("password must not be empty");}
+              return false;
+            if (number=="")
+              {alert("number must not be empty");}
+              return false;
+            if (country=="")
+              {alert("country must not be empty");}
+              return false;
+            if (gender=="")
+              {alert("gender must not be empty");}
+            
+          return false;
+      }
+  </script>
+</body>
+</html>
