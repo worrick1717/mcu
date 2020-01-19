@@ -112,12 +112,12 @@ a:active {
 		
 		<form name="htmlform" method="post" action="firstwebpage.html" onsubmit="return handleSubmit()">
 			<div><label>Name:</label>
-				<input type="text" Name="firstName" placeholder="firstName" id="firstName" required>
-				<input type="text" Name="lastName" placeholder="lastName" id="lastName"required><p>
+				<input type="text" Name="firstName" placeholder="firstName" id="firstName" >
+				<input type="text" Name="lastName" placeholder="lastName" id="lastName"><p>
 			</div><label>Email:</label>
-				<input type="email" name="email" placeholder="email" class="text"required><p>
+				<input type="email" name="email" placeholder="email" class="text"><p>
 			<label>Password:</label>
-				<input type="password" name="password" placeholder="password" class="text"required><p>
+				<input type="password" name="password" placeholder="password" class="text"><p>
 			<label>Contact:</label>
 			<select name="number">
 				<option>977</option>
@@ -126,7 +126,7 @@ a:active {
 				<option>458</option>
 				<option>165</option>
 				<option>54<option><span>
-				<input type="number" name="number" placeholder="number" class="text"required></span><p>
+				<input type="number" name="number" placeholder="number" class="text" min="0"></span><p>
 			<label>country</label>
 			<select name="country">
 				<option>Nepal</option>
@@ -137,7 +137,7 @@ a:active {
 				<option>Japan</option>
 			</select><p>
 			<label>gender:</label>
-				<input type="radio"name="gender" value="male"required>male
+				<input type="radio"name="gender" value="male">male
 				<input type="radio"name="gender"value="female">female
 				<input type="radio"name="gender"value="others">others<p>
 				<a href="login.html"><input type="submit" ></a>
@@ -181,29 +181,30 @@ a:active {
 				var number=document.htmlform.number.value;
 				var country=document.htmlform.country.value;
 				var gender=document.htmlform.gender.value;
-				console.log(firstName,lastName,email,password,number,country,gender);
 			
 						if (firstName=="")
-							{alert("fisrtName must not be empty");}
-							return false;
+							{console.log("fisrtName must not be empty");return false;}
 						if (lastName=="")
-							{alert("lastName must not be empty");}
-							return false;
+							{console.log("lastName must not be empty");return false;}
 						if (email=="")
-							{alert("email must not be empty");}
-							return false;
-						if (password.length<9)
-							{alert("password must not be empty");}
-							return false;
-						if (number=="")
-							{alert("number must not be empty");}
-							return false;
-						if (country=="")
-							{alert("country must not be empty");}
-							return false;
-						if (gender=="")
-							{alert("gender must not be empty");}
+							{console.log("email must not be empty");return false;}
+						if (password=="")
+							{console.log("password must not be empty");return false;}
 						
+						if (number>0)
+							{console.log("number must not be empty");return false;}
+						if (country=="")
+							{console.log("country must not be empty");return false;}
+						if (gender=="")
+							{console.log("gender must not be empty");return false;}
+						console.log("firstName: ", firstName);
+						console.log("lastName: ", lastName);
+						console.log("email: ", email);
+						console.log("password: ", password);
+						console.log("number: ", number);
+						console.log("country: ", gender);
+						
+						alert("Form submitted successfully");
 					return false;
 			}
 	</script>
